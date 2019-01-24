@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11931,7 +11931,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;income&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;count&#39;</span><span class="p">])</span>
@@ -11947,7 +11947,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[56]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12067,7 +12067,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -12083,7 +12083,7 @@ div#notebook {
 <span class="n">n_at_most_50k</span> <span class="o">=</span> <span class="n">income_group_dict</span><span class="p">[</span><span class="s1">&#39;&lt;=50K&#39;</span><span class="p">]</span>
 
 <span class="c1"># TODO: Percentage of individuals whose income is more than $50,000</span>
-<span class="n">greater_percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_greater_50k</span><span class="o">/</span><span class="n">n_at_most_50k</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">greater_percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_greater_50k</span><span class="o">/</span><span class="n">n_records</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
 
 <span class="c1"># Print the results</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total number of records: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_records</span><span class="p">))</span>
@@ -12109,7 +12109,7 @@ div#notebook {
 <pre>Total number of records: 45222
 Individuals making more than $50,000: 11208
 Individuals making at most $50,000: 34014
-Percentage of individuals making more than $50,000: 32.95113776680191%
+Percentage of individuals making more than $50,000: 24.78439697492371%
 </pre>
 </div>
 </div>
@@ -12164,7 +12164,7 @@ Percentage of individuals making more than $50,000: 32.95113776680191%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -12214,7 +12214,7 @@ Percentage of individuals making more than $50,000: 32.95113776680191%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -12265,7 +12265,7 @@ Percentage of individuals making more than $50,000: 32.95113776680191%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -12490,7 +12490,7 @@ Percentage of individuals making more than $50,000: 32.95113776680191%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Temporary tester</span>
@@ -12516,6 +12516,7 @@ Percentage of individuals making more than $50,000: 32.95113776680191%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
 <span class="n">encode_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;workclass&#39;</span><span class="p">,</span><span class="s1">&#39;education_level&#39;</span><span class="p">,</span><span class="s1">&#39;marital-status&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">,</span><span class="s1">&#39;relationship&#39;</span><span class="p">,</span><span class="s1">&#39;race&#39;</span><span class="p">,</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span><span class="s1">&#39;native-country&#39;</span><span class="p">]</span>
+
 <span class="n">features_final</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">features_log_minmax_transform</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">encode_features</span><span class="p">)</span>
 
 <span class="c1"># TODO: Encode the &#39;income_raw&#39; data to numerical values</span>
@@ -12754,15 +12755,15 @@ It is a ratio of true positives(words classified as spam, and which are actually
 3.SVM</p>
 <h4 id="Decision-Tree">Decision Tree<a class="anchor-link" href="#Decision-Tree">&#182;</a></h4><ul>
 <li>Predict telecom(any subscription based) customer churn prediction and also to analyze the causative features[1a]</li>
-<li>Easy to interpret and can be explained to business relatively easily[1b]</li>
+<li>Easy to interpret and can be explained to business relatively easily can be pllied when we have a end goal and we need to find the best strategy/deciions to reach the destination[1b]</li>
 <li>Highly succeptible to noise in the data, small noise can lead to big changes in the model[1c]</li>
-<li>Helps to get a clear understanding of the doneor characteristics, performs good when there are less uncertainity in data like in this scenario[1c]</li>
+<li>Helps to get a clear understanding of the donor characteristics, performs good when there are less uncertainity in data like in this scenario[1c]</li>
 </ul>
 <h4 id="Gradient-Boosting">Gradient Boosting<a class="anchor-link" href="#Gradient-Boosting">&#182;</a></h4><ul>
 <li>Used in the field of learning to rank by the search engines[2a]</li>
 <li>Provides flexibility - can optimize on different loss functions[2b]</li>
 <li>Computationally expensive - GBMs often require many trees which can be time and memory exhaustive. Hence cannot be used where realtime analysis is needed[2b]</li>
-<li>Known to produce highly accuracate models, as targetting the correct individuals is important, we can consider this model[2b]</li>
+<li>Known to produce highly accuracate models, as targetting the correct individuals is critical, we can consider this model[2b]</li>
 </ul>
 <h4 id="SVM">SVM<a class="anchor-link" href="#SVM">&#182;</a></h4><ul>
 <li>Used in text and hypertext categorization with good accuracy,Protein Structure Prediction[3a, 3b]</li>
@@ -13050,8 +13051,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-<p>Analysing the perfromance of the three models, I would recommend to use Gradient Boosting classifier(GBC).</p>
+<h3 id="Answer:-"><strong>Answer: </strong><a class="anchor-link" href="#Answer:-">&#182;</a></h3><p>Analysing the perfromance of the three models, I would recommend to use Gradient Boosting classifier(GBC).</p>
 <p>As it has has relatively higher F score, which shows a better perfromance in precision and recall.
  Though time is not a critical factor in such non-realtime application, it is still good that GBC is much faster than SVM and not very slower than Decision tree model.
  Considerign the fact that we need a overall high accuracy model to target the correct type of indivduals, this model will be suitable for the current dataset.</p>
@@ -13076,8 +13076,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-<p>Gradient Boosting Classifier is a powerful algorithm which makes use of multiple weak models and their prediction capacity to build a single generic model. Each of the learners have their own strengths and weakness, the model grows by focussing on their weakness and iteratively redcuign those errors and finally combining all of them to form a strong model.</p>
+<h3 id="Answer:-"><strong>Answer: </strong><a class="anchor-link" href="#Answer:-">&#182;</a></h3><p>Gradient Boosting Classifier is a powerful algorithm which makes use of multiple weak models and their prediction capacity to build a single generic model. Each of the learners have their own strengths and weakness, the model grows by focussing on their weakness and iteratively redcuing those errors and finally combining all of them to form a strong model.</p>
 <p>By using this model we can take advantage of the various weak models which can look at the data and learn different aspects of it. With each new model being built on the weakness revealed by its previous model. Finally all these models coming together in deciding the most imporant factors that will help us to identify the most suitable individuals who will be most likely to be the donors.</p>
 
 </div>
@@ -13240,8 +13239,7 @@ Final F-score on the testing data: 0.7545
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-<p>There is definite improvement in performance of the tuned model as comapared to its naive sibling.</p>
+<h3 id="Answer:-"><strong>Answer: </strong><a class="anchor-link" href="#Answer:-">&#182;</a></h3><p>There is definite improvement in performance of the tuned model as compared to its naive sibling.</p>
 
 </div>
 </div>
